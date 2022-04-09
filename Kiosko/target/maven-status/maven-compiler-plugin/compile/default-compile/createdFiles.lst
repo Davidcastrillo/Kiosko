@@ -1,6 +1,7 @@
 cr\ac\una\kiosko\util\AppContext.class
 cr\ac\una\kiosko\util\BindingUtils.class
 cr\ac\una\kiosko\controller\Controller.class
+cr\ac\una\kiosko\controller\EditarKioskoController.class
 cr\ac\una\kiosko\util\Respuesta.class
 cr\ac\una\kiosko\controller\PrincipalController.class
 module-info.class

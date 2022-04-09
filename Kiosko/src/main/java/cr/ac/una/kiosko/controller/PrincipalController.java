@@ -29,7 +29,7 @@ public class PrincipalController extends Controller implements Initializable {
 
     @FXML
     private void OnActionBtnPlay(ActionEvent event) {
-        //hola sol , tiene que eliminar esta linea por si acaso.
+        //holi, ya la borre
         FlowController.getInstance().goViewInStage("EditarKiosko", stage);
     }
 
