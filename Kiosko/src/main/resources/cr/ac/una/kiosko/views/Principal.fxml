@@ -4,11 +4,13 @@
 <?import java.net.URL?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/15.0.1" fx:controller="cr.ac.una.kiosko.controller.PrincipalController">
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cr.ac.una.kiosko.controller.PrincipalController">
     <stylesheets>
         <URL value="@/cr/ac/una/kiosko/resources/principal.css" />
     </stylesheets>
    <children>
-      <JFXButton fx:id="BtnPlay" buttonType="RAISED" layoutX="274.0" layoutY="210.0" onAction="#OnActionBtnPlay" ripplerFill="#861414" text="PLAY" />
+      <JFXButton fx:id="BtnPlay" buttonType="RAISED" layoutX="349.0" layoutY="116.0" onAction="#OnActionBtnPlay" prefHeight="55.0" prefWidth="103.0" ripplerFill="#861414" text="PLAY" />
+      <JFXButton fx:id="BtnAcercaDe" layoutX="344.0" layoutY="245.0" onAction="#OnActionAcercaDe" prefHeight="55.0" prefWidth="113.0" text="ACERCA DE" />
+      <JFXButton fx:id="BtnSalir" layoutX="361.0" layoutY="373.0" onAction="#OnActionSalir" prefHeight="55.0" prefWidth="80.0" text="SALIR" />
    </children>
 </AnchorPane>

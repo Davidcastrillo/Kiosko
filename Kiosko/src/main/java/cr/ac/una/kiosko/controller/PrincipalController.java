@@ -29,7 +29,7 @@ public class PrincipalController extends Controller implements Initializable {
 
     @FXML
     private void OnActionBtnPlay(ActionEvent event) {
-        //holi, ya la borre
+
         FlowController.getInstance().goViewInStage("EditarKiosko", stage);
     }
 
