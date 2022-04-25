@@ -9,8 +9,8 @@
         <URL value="@/cr/ac/una/kiosko/resources/principal.css" />
     </stylesheets>
    <children>
-      <JFXButton fx:id="BtnPlay" buttonType="RAISED" layoutX="379.0" layoutY="121.0" onAction="#OnActionBtnPlay" ripplerFill="#861414" text="PLAY" />
-      <JFXButton layoutX="366.0" layoutY="227.0" text="Acerca de" />
-      <JFXButton layoutX="381.0" layoutY="376.0" text="Salir" />
+      <JFXButton fx:id="BtnPlay" buttonType="RAISED" layoutX="349.0" layoutY="116.0" onAction="#OnActionBtnPlay" prefHeight="55.0" prefWidth="103.0" ripplerFill="#861414" text="PLAY" />
+      <JFXButton fx:id="BtnAcercaDe" layoutX="344.0" layoutY="245.0" onAction="#OnActionBtnAcercade" prefHeight="55.0" prefWidth="113.0" text="ACERCA DE" />
+      <JFXButton fx:id="BtnSalir" layoutX="361.0" layoutY="373.0" onAction="#OnActionBtnSalir" prefHeight="55.0" prefWidth="80.0" text="SALIR" />
    </children>
 </AnchorPane>

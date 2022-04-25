@@ -18,6 +18,10 @@ public class PrincipalController extends Controller implements Initializable {
 
     @FXML
     private JFXButton BtnPlay;
+    @FXML
+    private JFXButton BtnAcercaDe;
+    @FXML
+    private JFXButton BtnSalir;
 
     /**
      * Initializes the controller class.
@@ -35,6 +39,14 @@ public class PrincipalController extends Controller implements Initializable {
     @Override
     public void initialize() {
         
+    }
+
+    @FXML
+    private void OnActionBtnAcercade(ActionEvent event) {
+    }
+
+    @FXML
+    private void OnActionBtnSalir(ActionEvent event) {
     }
     
 }

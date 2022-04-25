@@ -10,7 +10,7 @@
     </stylesheets>
    <children>
       <JFXButton fx:id="BtnPlay" buttonType="RAISED" layoutX="349.0" layoutY="116.0" onAction="#OnActionBtnPlay" prefHeight="55.0" prefWidth="103.0" ripplerFill="#861414" text="PLAY" />
-      <JFXButton fx:id="BtnAcercaDe" layoutX="344.0" layoutY="245.0" onAction="#OnActionAcercaDe" prefHeight="55.0" prefWidth="113.0" text="ACERCA DE" />
-      <JFXButton fx:id="BtnSalir" layoutX="361.0" layoutY="373.0" onAction="#OnActionSalir" prefHeight="55.0" prefWidth="80.0" text="SALIR" />
+      <JFXButton fx:id="BtnAcercaDe" layoutX="344.0" layoutY="245.0" onAction="#OnActionBtnAcercade" prefHeight="55.0" prefWidth="113.0" text="ACERCA DE" />
+      <JFXButton fx:id="BtnSalir" layoutX="361.0" layoutY="373.0" onAction="#OnActionBtnSalir" prefHeight="55.0" prefWidth="80.0" text="SALIR" />
    </children>
 </AnchorPane>
