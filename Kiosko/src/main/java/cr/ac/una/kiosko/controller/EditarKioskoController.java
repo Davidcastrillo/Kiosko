@@ -7,8 +7,10 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.ClipboardContent;
+import javafx.scene.input.DataFormat;
 import javafx.scene.input.DragEvent;
 import javafx.scene.input.Dragboard;
 import javafx.scene.input.MouseEvent;
@@ -64,16 +66,25 @@ public class EditarKioskoController extends Controller implements Initializable 
     private void OnDragOverEditPantalla(DragEvent event) {
           if (event.getDragboard().hasImage()) {
             event.acceptTransferModes(TransferMode.ANY);
-        }
+        } 
     }
 
     @FXML
     private void OnDragDroppedEditPantalla(DragEvent event) {
+           ImageView imagep = new ImageView();
+            imagep.setImage(event.getDragboard().getImage());
+             imagep.fitHeightProperty().bind(acpEditPantalla.heightProperty());
+             imagep.fitWidthProperty().bind(acpEditPantalla.widthProperty());
+            acpEditPantalla.getChildren().add(imagep);
         System.out.println("Buenas equisde aqui se dropeo algo");
     }
 
     @FXML
     private void OnDragMoveImgImagenes(MouseEvent event) {
+        Dragboard db = imgImagenes.startDragAndDrop(TransferMode.MOVE);
+        ClipboardContent cb = new ClipboardContent();
+        cb.putImage(imgImagenes.getImage());
+        db.setContent(cb);
     }
 
     @FXML
@@ -89,6 +100,11 @@ public class EditarKioskoController extends Controller implements Initializable 
 
     @FXML
     private void OnDragMoveImgtexto(MouseEvent event) {
+         
+        Dragboard db = imgTexto.startDragAndDrop(TransferMode.MOVE);
+        ClipboardContent cb = new ClipboardContent();
+        cb.putImage(imgTexto.getImage());
+        db.setContent(cb);
     }
 
     @FXML
