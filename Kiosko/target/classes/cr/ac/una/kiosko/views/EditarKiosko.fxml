@@ -1,14 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.net.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cr.ac.una.kiosko.controller.EditarKioskoController">
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="600.0" prefWidth="900.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/15.0.1" fx:controller="cr.ac.una.kiosko.controller.EditarKioskoController">
     <stylesheets>
-        <URL value="@/cr/ac/una/kiosko/resources/Styles.css"/>
+        <URL value="@/cr/ac/una/kiosko/resources/Styles.css" />
     </stylesheets>
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="223.0" prefWidth="123.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <AnchorPane fx:id="acpEditPantalla" onDragDropped="#OnDragDroppedEditPantalla" onDragOver="#OnDragOverEditPantalla" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #16E115;" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                           </HBox.margin>
+                        </AnchorPane>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" maxHeight="-Infinity" prefHeight="171.0" prefWidth="871.0" style="-fx-background-color: #0CB3EA;" VBox.vgrow="ALWAYS">
+                     <children>
+                        <ImageView fx:id="imgImagenes" fitHeight="150.0" fitWidth="200.0" onDragDetected="#OnDragMoveImgImagenes" pickOnBounds="true" HBox.hgrow="ALWAYS" />
+                        <ImageView fx:id="Imgvideos" fitHeight="150.0" fitWidth="200.0" onDragDetected="#OnDragMoveImgVideos" pickOnBounds="true" HBox.hgrow="ALWAYS" />
+                        <ImageView fx:id="imgTexto" fitHeight="150.0" fitWidth="200.0" onDragDetected="#OnDragMoveImgtexto" pickOnBounds="true" HBox.hgrow="ALWAYS" />
+                        <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="169.0" prefWidth="237.0" spacing="20.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <JFXButton fx:id="btnGestorImg" onAction="#OnActionBtnGestorImg" prefHeight="25.0" prefWidth="125.0" text="Gestor de imagenes" VBox.vgrow="ALWAYS" />
+                              <JFXButton fx:id="btnGestorVideos" onAction="#OnActionBtnGestorVideos" text="Gestor de videos" VBox.vgrow="ALWAYS" />
+                              <JFXButton fx:id="btnGestorTxt" onAction="#OnActionBtnGestorTxt" text="Gestor de texto" VBox.vgrow="ALWAYS" />
+                              <HBox alignment="CENTER" prefHeight="25.0" prefWidth="225.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <JFXButton fx:id="btnGuardar" onAction="#OnActionBtnGuardar" text="Guardar " />
+                                    <JFXButton fx:id="btnNuevo" layoutX="10.0" layoutY="10.0" onAction="#OnActionBtnNuevo" text="Nuevo " />
+                                    <JFXButton fx:id="btnCancelar" layoutX="70.0" layoutY="10.0" onAction="#OnActionBtnCancelar" text="Cancelar" />
+                                    <JFXButton fx:id="btnPlay" onAction="#OnActionBtnPlay" text="Play" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
 </AnchorPane>

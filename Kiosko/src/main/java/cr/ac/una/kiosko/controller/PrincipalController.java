@@ -29,7 +29,6 @@ public class PrincipalController extends Controller implements Initializable {
 
     @FXML
     private void OnActionBtnPlay(ActionEvent event) {
-
         FlowController.getInstance().goViewInStage("EditarKiosko", stage);
     }
 
