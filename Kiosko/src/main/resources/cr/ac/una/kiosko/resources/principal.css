@@ -6,9 +6,13 @@
 
 }
 
+.bodybg{
+    -fx-background-image: url('cr/ac/una/kiosko/resources/fuego.gif');-fx-background-size: 100% 100%;}
+
 .button {
      -fx-background-color: linear-gradient(#ff5400, #be1d00);
     -fx-background-radius: 10;
     -fx-background-insets: 0;
     -fx-text-fill: white;
 }
+

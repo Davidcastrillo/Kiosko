@@ -30,7 +30,7 @@
                         <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                      </VBox.margin>
                   </HBox>
-                  <HBox alignment="CENTER_RIGHT" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="171.0" prefWidth="866.0" style="-fx-background-color: #0CB3EA;" VBox.vgrow="ALWAYS">
+                  <HBox alignment="CENTER_RIGHT" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="171.0" prefWidth="866.0" VBox.vgrow="ALWAYS">
                      <children>
                         <ImageView fx:id="imgImagenes" fitHeight="150.0" fitWidth="200.0" onDragDetected="#OnDragMoveImgImagenes" pickOnBounds="true" HBox.hgrow="ALWAYS">
                            <image>

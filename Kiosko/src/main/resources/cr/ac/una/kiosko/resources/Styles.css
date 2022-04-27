@@ -5,3 +5,9 @@
 .mainFxmlClass {
 
 }
+.button {
+     -fx-background-color: linear-gradient(#ff5401, #be1d00);
+    -fx-background-radius: 10;
+    -fx-background-insets: 0;
+    -fx-text-fill: white;
+}
