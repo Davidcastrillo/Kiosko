@@ -5,6 +5,8 @@ import com.jfoenix.controls.JFXButton;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.event.EventType;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.image.Image;
@@ -48,6 +50,7 @@ public class EditarKioskoController extends Controller implements Initializable 
     private JFXButton btnCancelar;
     @FXML
     private JFXButton btnPlay;
+     ImageView imagep = new ImageView();
 
     /**
      * Initializes the controller class.
@@ -71,11 +74,29 @@ public class EditarKioskoController extends Controller implements Initializable 
 
     @FXML
     private void OnDragDroppedEditPantalla(DragEvent event) {
-           ImageView imagep = new ImageView();
-            imagep.setImage(event.getDragboard().getImage());
-             imagep.fitHeightProperty().bind(acpEditPantalla.heightProperty());
-             imagep.fitWidthProperty().bind(acpEditPantalla.widthProperty());
-            acpEditPantalla.getChildren().add(imagep);
+         EventHandler<MouseEvent> handler = new EventHandler<MouseEvent>() {
+             @Override
+             public void handle(MouseEvent t) {
+                imagep.setX(t.getX());
+                imagep.setY(t.getY());
+                 System.out.println("me llevan los aliens"); 
+                 
+             }
+         };
+         EventHandler<MouseEvent> drophand = new EventHandler<MouseEvent>() {
+             @Override
+             public void handle(MouseEvent t) {
+                 
+             }
+         };
+         imagep.setImage(event.getDragboard().getImage());
+         imagep.setFitHeight(100);
+         imagep.setFitWidth(100);
+          acpEditPantalla.getChildren().add(imagep);
+        imagep.addEventHandler(MouseEvent.MOUSE_DRAGGED, handler);
+       
+       
+          
         System.out.println("Buenas equisde aqui se dropeo algo");
     }
 
