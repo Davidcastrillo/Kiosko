@@ -1,38 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import java.net.URL?>
+<?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cr.ac.una.kiosko.controller.PrincipalController">
-    <stylesheets>
-        <URL value="@/cr/ac/una/kiosko/resources/principal.css" />
-    </stylesheets>
+<AnchorPane id="AnchorPane" prefHeight="740.0" prefWidth="743.0" stylesheets="@../resources/Styles.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cr.ac.una.kiosko.controller.PrincipalController">
    <children>
-      <ImageView fitHeight="740.0" fitWidth="785.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
-         <image>
-            <Image url="@../resources/t5.gif" />
-         </image>
-      </ImageView>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <ImageView fitHeight="740.0" fitWidth="770.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+               <image>
+                  <Image url="@../resources/hexagon_blue_abstract_background_23618.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
       <AnchorPane minHeight="200.0" prefHeight="500.0" prefWidth="200.0" AnchorPane.bottomAnchor="340.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="200.0">
          <children>
-            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="0.0">
+            <VBox alignment="TOP_CENTER" layoutX="-2.0" prefHeight="200.0" prefWidth="143.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="0.0">
                <children>
-                  <JFXButton fx:id="BtnPlay" buttonType="RAISED" onAction="#OnActionBtnPlay" prefHeight="57.0" prefWidth="176.0" ripplerFill="#861414" text="PLAY">
+                  <JFXButton fx:id="BtnPlay" buttonType="RAISED" onAction="#OnActionBtnPlay" prefHeight="50.0" prefWidth="175.0" ripplerFill="#861414" styleClass="jfx-menubutton1" stylesheets="@../resources/Styles.css" text="PLAY">
                      <VBox.margin>
                         <Insets bottom="30.0" />
                      </VBox.margin>
                   </JFXButton>
-                  <JFXButton fx:id="BtnAcercaDe" onAction="#OnActionBtnAcercade" prefHeight="55.0" prefWidth="113.0" text="ACERCA DE">
+                  <JFXButton fx:id="BtnAcercaDe" onAction="#OnActionBtnAcercade" prefHeight="50.0" prefWidth="175.0" styleClass="jfx-menubutton1" stylesheets="@../resources/Styles.css" text="ACERCA DE">
                      <VBox.margin>
                         <Insets bottom="30.0" />
                      </VBox.margin>
                   </JFXButton>
-                  <JFXButton fx:id="BtnSalir" onAction="#OnActionBtnSalir" prefHeight="55.0" prefWidth="80.0" text="SALIR">
+                  <JFXButton fx:id="BtnSalir" onAction="#OnActionBtnSalir" prefHeight="50.0" prefWidth="175.0" styleClass="jfx-menubutton1" stylesheets="@../resources/Styles.css" text="SALIR">
                      <VBox.margin>
                         <Insets bottom="10.0" />
                      </VBox.margin>
@@ -45,4 +47,8 @@
          </children>
       </AnchorPane>
    </children>
+   <styleClass>
+      <String fx:value="mainFxmlClass" />
+      <String fx:value="jfx-Fondo" />
+   </styleClass>
 </AnchorPane>

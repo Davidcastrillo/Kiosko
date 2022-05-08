@@ -11,3 +11,80 @@
     -fx-background-insets: 0;
     -fx-text-fill: white;
 }
+.jfx-menubutton1{
+    -fx-background-color: linear-gradient(#0099FF, #4047CE);
+    -fx-background-radius: 5;
+    -fx-background-insets: 0;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-content-display: top;
+    -fx-opacity: 0.87;
+    -fx-alignment:CENTER;
+}
+
+.jfx-menubutton2{
+    -fx-background-color: linear-gradient(#3F51B5, #4047CE);
+    -fx-background-radius: 5;
+    -fx-background-insets: 0;
+    -fx-text-fill: white;
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+    -fx-content-display: top;
+    -fx-opacity: 0.87;
+    -fx-alignment:CENTER;
+}
+
+
+.jfx-Cancelar{
+    -fx-background-color: linear-gradient(#D32F2F , #4047CE);
+    -fx-background-radius: 5;
+    -fx-background-insets: 0;
+    -fx-text-fill: white;
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+    -fx-content-display: top;
+    -fx-opacity: 0.87;
+    -fx-alignment:CENTER;
+}
+
+
+.jfx-Guardar{
+    -fx-background-color: linear-gradient(#4CAF50 , #4047CE);
+    -fx-background-radius: 5;
+    -fx-background-insets: 0;
+    -fx-text-fill: white;
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+    -fx-content-display: top;
+    -fx-opacity: 0.87;
+    -fx-alignment:CENTER;
+}
+
+.jfx-Nuevo{
+    -fx-background-color: linear-gradient(#D4E157, #4047CE);
+    -fx-background-radius: 5;
+    -fx-background-insets: 0;
+    -fx-text-fill: white;
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+    -fx-content-display: top;
+    -fx-opacity: 0.87;
+    -fx-alignment:CENTER;
+}
+
+.jfx-Play{
+    -fx-background-color: linear-gradient(#0099FF, #4047CE);
+    -fx-background-radius: 5;
+    -fx-background-insets: 0;
+    -fx-text-fill: white;
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+    -fx-content-display: top;
+    -fx-opacity: 0.87;
+    -fx-alignment:CENTER;
+}
+
+.jfx-Fondo{
+    -fx-background-color:#E0F7FA;
+}

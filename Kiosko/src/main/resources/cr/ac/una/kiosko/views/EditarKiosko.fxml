@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -9,10 +8,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane id="AnchorPane" fx:id="root" prefHeight="600.0" prefWidth="900.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cr.ac.una.kiosko.controller.EditarKioskoController">
-    <stylesheets>
-        <URL value="@/cr/ac/una/kiosko/resources/Styles.css" />
-    </stylesheets>
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="600.0" prefWidth="900.0" styleClass="jfx-Fondo" stylesheets="@../resources/Styles.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cr.ac.una.kiosko.controller.EditarKioskoController">
    <children>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
          <children>
@@ -30,31 +26,43 @@
                         <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                      </VBox.margin>
                   </HBox>
-                  <HBox alignment="CENTER_RIGHT" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="171.0" prefWidth="866.0" VBox.vgrow="ALWAYS">
+                  <HBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="171.0" prefWidth="866.0" VBox.vgrow="ALWAYS">
                      <children>
-                        <ImageView fx:id="imgImagenes" fitHeight="150.0" fitWidth="200.0" onDragDetected="#OnDragMoveImgImagenes" pickOnBounds="true" HBox.hgrow="ALWAYS">
+                        <ImageView fx:id="imgImagenes" fitHeight="150.0" fitWidth="172.0" onDragDetected="#OnDragMoveImgImagenes" pickOnBounds="true" HBox.hgrow="ALWAYS">
                            <image>
                               <Image url="@../resources/WhatsApp%20Image%202022-04-17%20at%203.10.58%20PM.jpeg" />
                            </image></ImageView>
-                        <ImageView fx:id="Imgvideos" fitHeight="150.0" fitWidth="200.0" onDragDetected="#OnDragMoveImgVideos" pickOnBounds="true" HBox.hgrow="ALWAYS">
+                        <ImageView fx:id="Imgvideos" fitHeight="150.0" fitWidth="171.0" onDragDetected="#OnDragMoveImgVideos" pickOnBounds="true" HBox.hgrow="ALWAYS">
                            <image>
                               <Image url="@../resources/WhatsApp%20Image%202022-04-17%20at%203.10.58%20PM.jpeg" />
                            </image></ImageView>
-                        <ImageView fx:id="imgTexto" fitHeight="150.0" fitWidth="200.0" onDragDetected="#OnDragMoveImgtexto" pickOnBounds="true" HBox.hgrow="ALWAYS">
+                        <ImageView fx:id="imgTexto" fitHeight="150.0" fitWidth="165.0" onDragDetected="#OnDragMoveImgtexto" pickOnBounds="true" HBox.hgrow="ALWAYS">
                            <image>
                               <Image url="@../resources/WhatsApp%20Image%202022-04-17%20at%203.10.58%20PM.jpeg" />
-                           </image></ImageView>
-                        <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="169.0" prefWidth="237.0" spacing="20.0" HBox.hgrow="ALWAYS">
+                           </image>
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin></ImageView>
+                        <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="169.0" prefWidth="267.0" spacing="20.0" HBox.hgrow="ALWAYS">
                            <children>
-                              <JFXButton fx:id="btnGestorImg" onAction="#OnActionBtnGestorImg" prefHeight="25.0" prefWidth="125.0" text="Gestor de imagenes" VBox.vgrow="ALWAYS" />
-                              <JFXButton fx:id="btnGestorVideos" onAction="#OnActionBtnGestorVideos" text="Gestor de videos" VBox.vgrow="ALWAYS" />
-                              <JFXButton fx:id="btnGestorTxt" onAction="#OnActionBtnGestorTxt" text="Gestor de texto" VBox.vgrow="ALWAYS" />
+                              <JFXButton fx:id="btnGestorImg" onAction="#OnActionBtnGestorImg" prefHeight="25.0" prefWidth="125.0" styleClass="jfx-menubutton2" stylesheets="@../resources/Styles.css" text="Gestor de imagenes" VBox.vgrow="ALWAYS" />
+                              <JFXButton fx:id="btnGestorVideos" onAction="#OnActionBtnGestorVideos" prefHeight="25.0" prefWidth="125.0" styleClass="jfx-menubutton2" stylesheets="@../resources/Styles.css" text="Gestor de videos" VBox.vgrow="ALWAYS" />
+                              <JFXButton fx:id="btnGestorTxt" onAction="#OnActionBtnGestorTxt" prefHeight="25.0" prefWidth="125.0" styleClass="jfx-menubutton2" stylesheets="@../resources/Styles.css" text="Gestor de texto" VBox.vgrow="ALWAYS" />
                               <HBox alignment="CENTER" prefHeight="25.0" prefWidth="225.0" VBox.vgrow="ALWAYS">
                                  <children>
-                                    <JFXButton fx:id="btnGuardar" onAction="#OnActionBtnGuardar" text="Guardar " />
-                                    <JFXButton fx:id="btnNuevo" layoutX="10.0" layoutY="10.0" onAction="#OnActionBtnNuevo" text="Nuevo " />
-                                    <JFXButton fx:id="btnCancelar" layoutX="70.0" layoutY="10.0" onAction="#OnActionBtnCancelar" text="Cancelar" />
-                                    <JFXButton fx:id="btnPlay" onAction="#OnActionBtnPlay" text="Play" />
+                                    <JFXButton fx:id="btnGuardar" onAction="#OnActionBtnGuardar" prefHeight="20.0" prefWidth="60.0" styleClass="jfx-Guardar" stylesheets="@../resources/Styles.css" text="Guardar ">
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin></JFXButton>
+                                    <JFXButton fx:id="btnNuevo" layoutX="10.0" layoutY="10.0" onAction="#OnActionBtnNuevo" prefHeight="20.0" prefWidth="60.0" styleClass="jfx-Nuevo" stylesheets="@../resources/Styles.css" text="Nuevo ">
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin></JFXButton>
+                                    <JFXButton fx:id="btnCancelar" layoutX="70.0" layoutY="10.0" onAction="#OnActionBtnCancelar" prefHeight="20.0" prefWidth="60.0" styleClass="jfx-Cancelar" stylesheets="@../resources/Styles.css" text="Cancelar">
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin></JFXButton>
+                                    <JFXButton fx:id="btnPlay" onAction="#OnActionBtnPlay" prefHeight="20.0" prefWidth="60.0" styleClass="jfx-Play" stylesheets="@../resources/Styles.css" text="Play" />
                                  </children>
                                  <VBox.margin>
                                     <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
