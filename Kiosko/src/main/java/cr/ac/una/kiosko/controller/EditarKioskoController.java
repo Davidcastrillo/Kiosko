@@ -2,17 +2,18 @@
 package cr.ac.una.kiosko.controller;
 
 import com.jfoenix.controls.JFXButton;
+import cr.ac.una.kiosko.model.Ventanas;
+import cr.ac.una.unaplanilla2.util.Mensaje;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.event.EventType;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.ClipboardContent;
-import javafx.scene.input.DataFormat;
 import javafx.scene.input.DragEvent;
 import javafx.scene.input.Dragboard;
 import javafx.scene.input.MouseEvent;
@@ -50,7 +51,9 @@ public class EditarKioskoController extends Controller implements Initializable 
     private JFXButton btnCancelar;
     @FXML
     private JFXButton btnPlay;
-     ImageView imagep = new ImageView();
+    int limit = 1;
+    int contador = 1;
+    
 
     /**
      * Initializes the controller class.
@@ -74,45 +77,58 @@ public class EditarKioskoController extends Controller implements Initializable 
 
     @FXML
     private void OnDragDroppedEditPantalla(DragEvent event) {
-         EventHandler<MouseEvent> handler = new EventHandler<MouseEvent>() {
-             @Override
-             public void handle(MouseEvent t) {
-                imagep.setX(t.getX());
-                imagep.setY(t.getY());
-                 System.out.println("me llevan los aliens"); 
-                 
-             }
-         };
-         EventHandler<MouseEvent> drophand = new EventHandler<MouseEvent>() {
-             @Override
-             public void handle(MouseEvent t) {
-                 
-             }
-         };
-         imagep.setImage(event.getDragboard().getImage());
-         imagep.setFitHeight(100);
-         imagep.setFitWidth(100);
-          acpEditPantalla.getChildren().add(imagep);
-        imagep.addEventHandler(MouseEvent.MOUSE_DRAGGED, handler);
-       
-       
-          
-        System.out.println("Buenas equisde aqui se dropeo algo");
+        String con2 = (String.valueOf(contador));
+        String id = event.getDragboard().getString();
+        
+        if (id == null ? con2 == null : id.equals(con2))  {
+          Ventanas vent = new Ventanas();
+          EventHandler<MouseEvent> handler = (MouseEvent t) -> {
+             vent.setX(t.getX());
+             vent.setY(t.getY());
+             System.out.println("me llevan los aliens");
+        };
+        System.out.println(event.getDragboard().getString());
+        
+        
+        vent.setIdimg(event.getDragboard().getString());
+        vent.setImage(vent.crearventana());
+        acpEditPantalla.getChildren().add(vent);
+        vent.addEventHandler(MouseEvent.MOUSE_DRAGGED, handler);
+        vent.setFitHeight(100);
+        vent.setFitWidth(100); 
+        contador++;
+        }
+//        else if (con2>id) {
+//            
+//            
+//        }
+        else if (id!=con2) {
+           new Mensaje().showConfirmation("Cuidado", stage, "No Se pueden agregar 2 ventanas del mismo tipo, por favor seleccione Otro tipo de ventana");   
+        } else {
+         new  Mensaje().showConfirmation("Cuidado", stage, "Se ha superado la cantidad de ventanas");   
+        }
+
+
+          System.out.println("aqui se dropo algo ");
+        
     }
 
     @FXML
     private void OnDragMoveImgImagenes(MouseEvent event) {
+        String n = "1";
         Dragboard db = imgImagenes.startDragAndDrop(TransferMode.MOVE);
         ClipboardContent cb = new ClipboardContent();
+        cb.putString(n);
         cb.putImage(imgImagenes.getImage());
         db.setContent(cb);
     }
 
     @FXML
     private void OnDragMoveImgVideos(MouseEvent event) {
-        
+        String n = "2";
         Dragboard db = Imgvideos.startDragAndDrop(TransferMode.MOVE);
         ClipboardContent cb = new ClipboardContent();
+        cb.putString(n);
         cb.putImage(Imgvideos.getImage());
         db.setContent(cb);
        
@@ -121,10 +137,11 @@ public class EditarKioskoController extends Controller implements Initializable 
 
     @FXML
     private void OnDragMoveImgtexto(MouseEvent event) {
-         
+        String n = "3";
         Dragboard db = imgTexto.startDragAndDrop(TransferMode.MOVE);
         ClipboardContent cb = new ClipboardContent();
         cb.putImage(imgTexto.getImage());
+        cb.putString(n);
         db.setContent(cb);
     }
 

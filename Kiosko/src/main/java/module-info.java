@@ -10,4 +10,5 @@ module cr.ac.una.kiosko {
     exports cr.ac.una.kiosko.controller;
     exports cr.ac.una.kiosko.util;
     exports cr.ac.una.kiosko;
+    
 }

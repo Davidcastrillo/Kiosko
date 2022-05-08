@@ -1,10 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package cr.ac.una.kiosko.model;
 
-import java.lang.invoke.MethodHandle;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
@@ -12,44 +8,50 @@ import javafx.scene.image.ImageView;
  *
  * @author David
  */
-public class Ventanas{
-     public String posx;
-     public String posy;
-     public String idimg;
-     public ImageView images;
-     public String tiempo;
+public class Ventanas extends ImageView{
+    /*Como es una herencia de imageView el " el setX" y "setY" se manejan con las propiedades de el imageview
+    */ 
+     
+     private String idimg;
+     private Image images;
+     private int tiempo;
 
-    public Ventanas(String x, String y, String id, ImageView images, String time) {
-        this.posx = x;
-        this.posy = y;
-        this.idimg = id;
-        this.images = images;
-        this.tiempo = time;
+    public Ventanas() {
+        this.idimg = "0";
+        this.tiempo = 0;
+        
+        
     }
-
-    public Ventanas(String posx, String posy, String idimg, String tiempo) {
-        this.posx = posx;
-        this.posy = posy;
-        this.idimg = idimg;
-        this.tiempo = tiempo;
+    public Image crearventana(){
+        try {
+           switch(this.idimg){
+               case "1":
+                   System.out.println("Una Mentira");
+                   Image image = new Image("cr/ac/una/Kiosko/resources/NE.jpeg");
+                   setImages(image);
+                   break;
+               case"2":
+                   System.out.println("Una Mentira");
+                   Image image2 = new Image("cr/ac/una/Kiosko/resources/NE.jpeg");
+                  setImages(image2);
+                   break;
+               case"3":
+                  System.out.println("Una Mentira3");
+//                 setImage(this.images);
+//                 setFitHeight(100);
+//                setFitWidth(500);  
+                   break;      
+             default:
+                System.out.println("me cai en la clase ventana en el metodo crear ventana");
+              
+           }
+        } catch (Exception e) {
+            System.out.println("me cai en la clase ventana en el metodo crear ventana");
+        }
+         return images;
+        
     }
-    
-    public String getPosx() {
-        return posx;
-    }
-
-    public void setPosx(String posx) {
-        this.posx = posx;
-    }
-
-    public String getPosy() {
-        return posy;
-    }
-
-    public void setPosy(String posy) {
-        this.posy = posy;
-    }
-
+  
     public String getIdimg() {
         return idimg;
     }
@@ -58,19 +60,19 @@ public class Ventanas{
         this.idimg = idimg;
     }
 
-    public ImageView getImages() {
+    public Image getImages() {
         return images;
     }
 
-    public void setImages(ImageView images) {
+    public void setImages(Image images) {
         this.images = images;
     }
 
-    public String getTiempo() {
+    public int getTiempo() {
         return tiempo;
     }
 
-    public void setTiempo(String tiempo) {
+    public void setTiempo(int tiempo) {
         this.tiempo = tiempo;
     }
     
