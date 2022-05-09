@@ -88,3 +88,20 @@
 .jfx-Fondo{
     -fx-background-color:#E0F7FA;
 }
+
+.jfx-Aceptar{
+    -fx-background-color: linear-gradient(#1D8348, #4047CE);
+    -fx-background-radius: 5;
+    -fx-background-insets: 0;
+    -fx-text-fill: white;
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+    -fx-content-display: top;
+    -fx-opacity: 0.87;
+    -fx-alignment:CENTER;
+}
+
+
+.txt-field{
+     -fx-text-fill: #00000e;
+}

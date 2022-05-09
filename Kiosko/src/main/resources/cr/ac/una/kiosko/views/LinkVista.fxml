@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="200.0" prefWidth="300.0" styleClass="jfx-Fondo" stylesheets="@../resources/Styles.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cr.ac.una.kiosko.controller.LinkVistaController">
+   <children>
+      <ImageView fitHeight="200.0" fitWidth="352.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/fondo-acuarela-pintada-mano-forma-cielo-nubes_24972-1108.jpg" />
+         </image>
+      </ImageView>
+      <VBox alignment="CENTER" layoutX="21.0" layoutY="19.0" prefHeight="162.0" prefWidth="260.0">
+         <children>
+            <JFXTextField fx:id="txtLinkVideo" alignment="CENTER" promptText="Inserte un link para video aqui" styleClass="txt-field" stylesheets="@../resources/Styles.css" />
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <JFXButton fx:id="btnAceptar" onAction="#OnActionAceptar" prefHeight="30.0" prefWidth="75.0" styleClass="jfx-Aceptar" stylesheets="@../resources/Styles.css" text="Aceptar">
+                     <HBox.margin>
+                        <Insets right="50.0" />
+                     </HBox.margin></JFXButton>
+                  <JFXButton fx:id="btnCancelar" onAction="#OnActionCancelar" prefHeight="30.0" prefWidth="75.0" styleClass="jfx-Cancelar" stylesheets="@../resources/Styles.css" text="Cancelar" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

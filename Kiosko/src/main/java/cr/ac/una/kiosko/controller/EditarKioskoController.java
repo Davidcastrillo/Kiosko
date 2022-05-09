@@ -3,6 +3,7 @@ package cr.ac.una.kiosko.controller;
 
 import com.jfoenix.controls.JFXButton;
 import cr.ac.una.kiosko.model.Ventanas;
+import cr.ac.una.kiosko.util.FlowController;
 import cr.ac.una.unaplanilla2.util.Mensaje;
 import java.net.URL;
 import java.util.ArrayList;
@@ -151,10 +152,12 @@ public class EditarKioskoController extends Controller implements Initializable 
 
     @FXML
     private void OnActionBtnGestorVideos(ActionEvent event) {
+        FlowController.getInstance().goViewInStage("LinkView", stage);
     }
 
     @FXML
     private void OnActionBtnGestorTxt(ActionEvent event) {
+        FlowController.getInstance().goViewInStage("TextoVista", stage);
     }
 
     @FXML

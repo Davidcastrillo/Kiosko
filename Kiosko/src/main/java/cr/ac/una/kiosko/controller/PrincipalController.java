@@ -43,6 +43,7 @@ public class PrincipalController extends Controller implements Initializable {
 
     @FXML
     private void OnActionBtnAcercade(ActionEvent event) {
+         FlowController.getInstance().goViewInStage("AcercaDe", stage);
     }
 
     @FXML
