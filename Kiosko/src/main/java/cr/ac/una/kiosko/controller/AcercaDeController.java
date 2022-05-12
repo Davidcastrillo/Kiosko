@@ -4,9 +4,11 @@
  */
 package cr.ac.una.kiosko.controller;
 
+import com.jfoenix.controls.JFXButton;
 import cr.ac.una.kiosko.util.FlowController;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.image.ImageView;
@@ -18,10 +20,10 @@ import javafx.stage.Stage;
  *
  * @author maris
  */
-public class AcercaDeController implements Initializable {
+public class AcercaDeController extends Controller implements Initializable {
 
     @FXML
-    private ImageView btnAtras;
+    private JFXButton btnAtras;
 
     /**
      * Initializes the controller class.
@@ -32,9 +34,14 @@ public class AcercaDeController implements Initializable {
     }    
 
     @FXML
-    private void OnActionAtras(MouseEvent event) {
-        Stage stage = null;
-        FlowController.getInstance().goViewInStage("EditarKiosko", stage);
+    private void OnActionAtras(ActionEvent event) {
+        FlowController.getInstance().goViewInStage("Principal", stage);
+       
+    }
+
+    @Override
+    public void initialize() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
 }
