@@ -29,6 +29,19 @@
     </dependencies>
     <build>
         <plugins>
+              <plugin>
+              <version>3.0.2</version>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-jar-plugin</artifactId>
+            <configuration>
+              <archive>
+                <manifest>
+                  <addClasspath>true</addClasspath>
+              <mainClass>cr.ac.una.kiosko.App</mainClass>
+                </manifest>
+              </archive>
+            </configuration>
+              </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
