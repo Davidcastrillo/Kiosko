@@ -4,6 +4,7 @@ module cr.ac.una.kiosko {
     requires java.logging;
     requires java.base;
     requires com.jfoenix;
+
     
     opens cr.ac.una.kiosko to javafx.fxml;
     opens cr.ac.una.kiosko.controller to javafx.fxml;

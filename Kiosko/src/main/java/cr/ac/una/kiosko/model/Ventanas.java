@@ -26,20 +26,19 @@ public class Ventanas extends ImageView{
         try {
            switch(this.idimg){
                case "1":
-                   System.out.println("Una Mentira");
-                   Image image = new Image("cr/ac/una/Kiosko/resources/NE.jpeg");
-                   setImages(image);
+                  setImage(this.images);
+                  // Image image = new Image("cr/ac/una/Kiosko/resources/NE.jpeg");
+                  //setImages(image);
                    break;
                case"2":
-                   System.out.println("Una Mentira");
-                   Image image2 = new Image("cr/ac/una/Kiosko/resources/NE.jpeg");
-                  setImages(image2);
+                 setImage(this.images);
+                  // Image image2 = new Image("cr/ac/una/Kiosko/resources/NE.jpeg");
+//                  setImages(image2);
                    break;
                case"3":
-                  System.out.println("Una Mentira3");
-//                 setImage(this.images);
-//                 setFitHeight(100);
-//                setFitWidth(500);  
+                 setImage(this.images);
+                 setFitHeight(100);
+                setFitWidth(500);  
                    break;      
              default:
                 System.out.println("me cai en la clase ventana en el metodo crear ventana");

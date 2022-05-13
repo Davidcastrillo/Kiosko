@@ -8,6 +8,7 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -48,6 +49,7 @@ public class PrincipalController extends Controller implements Initializable {
 
     @FXML
     private void OnActionBtnSalir(ActionEvent event) {
+         ((Stage)BtnSalir.getScene().getWindow()).close();
     }
     
 }

@@ -6,11 +6,9 @@ import cr.ac.una.kiosko.model.Ventanas;
 import cr.ac.una.kiosko.util.FlowController;
 import cr.ac.una.unaplanilla2.util.Mensaje;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import javafx.event.EventType;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.image.ImageView;
@@ -86,11 +84,9 @@ public class EditarKioskoController extends Controller implements Initializable 
           EventHandler<MouseEvent> handler = (MouseEvent t) -> {
              vent.setX(t.getX());
              vent.setY(t.getY());
-             System.out.println("me llevan los aliens");
+             
         };
-        System.out.println(event.getDragboard().getString());
-        
-        
+        vent.setImages(event.getDragboard().getImage());
         vent.setIdimg(event.getDragboard().getString());
         vent.setImage(vent.crearventana());
         acpEditPantalla.getChildren().add(vent);
@@ -99,10 +95,7 @@ public class EditarKioskoController extends Controller implements Initializable 
         vent.setFitWidth(100); 
         contador++;
         }
-//        else if (con2>id) {
-//            
-//            
-//        }
+
         else if (id!=con2) {
            new Mensaje().showConfirmation("Cuidado", stage, "No Se pueden agregar 2 ventanas del mismo tipo, por favor seleccione Otro tipo de ventana");   
         } else {
@@ -110,7 +103,7 @@ public class EditarKioskoController extends Controller implements Initializable 
         }
 
 
-          System.out.println("aqui se dropo algo ");
+          ;
         
     }
 
@@ -152,12 +145,12 @@ public class EditarKioskoController extends Controller implements Initializable 
 
     @FXML
     private void OnActionBtnGestorVideos(ActionEvent event) {
-        FlowController.getInstance().goViewInStage("LinkView", stage);
+        FlowController.getInstance().goViewInWindow("LinkVista");
     }
 
     @FXML
     private void OnActionBtnGestorTxt(ActionEvent event) {
-        FlowController.getInstance().goViewInStage("TextoVista", stage);
+        FlowController.getInstance().goViewInWindow("TextoVista");
     }
 
     @FXML

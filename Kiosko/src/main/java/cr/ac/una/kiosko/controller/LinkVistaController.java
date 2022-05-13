@@ -11,20 +11,21 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.TextField;
 
 /**
  * FXML Controller class
  *
- * @author maris
+ * @author David
  */
-public class LinkVistaController implements Initializable {
+public class LinkVistaController extends Controller implements Initializable {
 
-    @FXML
-    private JFXTextField txtLinkVideo;
     @FXML
     private JFXButton btnAceptar;
     @FXML
     private JFXButton btnCancelar;
+    @FXML
+    private TextField txtUrl;
 
     /**
      * Initializes the controller class.
@@ -40,6 +41,11 @@ public class LinkVistaController implements Initializable {
 
     @FXML
     private void OnActionCancelar(ActionEvent event) {
+    }
+
+    @Override
+    public void initialize() {
+        
     }
     
 }

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -11,15 +11,15 @@
 
 <AnchorPane id="AnchorPane" prefHeight="200.0" prefWidth="300.0" styleClass="jfx-Fondo" stylesheets="@../resources/Styles.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cr.ac.una.kiosko.controller.LinkVistaController">
    <children>
-      <ImageView fitHeight="200.0" fitWidth="352.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="200.0" fitWidth="352.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.69970703125" AnchorPane.topAnchor="0.0">
          <image>
             <Image url="@../resources/fondo-acuarela-pintada-mano-forma-cielo-nubes_24972-1108.jpg" />
          </image>
       </ImageView>
-      <VBox alignment="CENTER" layoutX="21.0" layoutY="19.0" prefHeight="162.0" prefWidth="260.0">
+      <VBox alignment="CENTER" layoutX="21.0" layoutY="19.0" prefHeight="162.0" prefWidth="260.0" AnchorPane.bottomAnchor="19.0" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="19.0">
          <children>
-            <JFXTextField fx:id="txtLinkVideo" alignment="CENTER" promptText="Inserte un link para video aqui" styleClass="txt-field" stylesheets="@../resources/Styles.css" />
-            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+            <TextField fx:id="txtUrl" alignment="CENTER" promptText="URL" styleClass="jfx-Fondo" />
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="NEVER">
                <children>
                   <JFXButton fx:id="btnAceptar" onAction="#OnActionAceptar" prefHeight="30.0" prefWidth="75.0" styleClass="jfx-Aceptar" stylesheets="@../resources/Styles.css" text="Aceptar">
                      <HBox.margin>

@@ -30,15 +30,15 @@
                      <children>
                         <ImageView fx:id="imgImagenes" fitHeight="150.0" fitWidth="172.0" onDragDetected="#OnDragMoveImgImagenes" pickOnBounds="true" HBox.hgrow="ALWAYS">
                            <image>
-                              <Image url="@../resources/WhatsApp%20Image%202022-04-17%20at%203.10.58%20PM.jpeg" />
+                              <Image url="@../resources/img.png" />
                            </image></ImageView>
                         <ImageView fx:id="Imgvideos" fitHeight="150.0" fitWidth="171.0" onDragDetected="#OnDragMoveImgVideos" pickOnBounds="true" HBox.hgrow="ALWAYS">
                            <image>
-                              <Image url="@../resources/WhatsApp%20Image%202022-04-17%20at%203.10.58%20PM.jpeg" />
+                              <Image url="@../resources/sitio-web.png" />
                            </image></ImageView>
                         <ImageView fx:id="imgTexto" fitHeight="150.0" fitWidth="165.0" onDragDetected="#OnDragMoveImgtexto" pickOnBounds="true" HBox.hgrow="ALWAYS">
                            <image>
-                              <Image url="@../resources/WhatsApp%20Image%202022-04-17%20at%203.10.58%20PM.jpeg" />
+                              <Image url="@../resources/txt.png" />
                            </image>
                            <HBox.margin>
                               <Insets right="20.0" />
